@@ -1,0 +1,323 @@
+/* Recipe for a Cozy Night
+   A warm, editorial layout with a sunset-to-midnight color palette. */
+
+:root {
+    --cream: #f3ebdd;
+    --ink: #08090c;
+    --rose: #b7837f;
+    --mauve: #896d73;
+    --plum: #685b68;
+    --slate: #4c4b59;
+    --midnight: #17181d;
+    --serif: Georgia, "Times New Roman", Times, serif;
+    --content-width: 680px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--ink) url("img/star 2.jpg") center / cover fixed;
+    color: var(--cream);
+    font-family: var(--serif);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+    width: min(100% - 40px, 980px);
+    margin: 0 auto;
+    padding: clamp(56px, 10vw, 110px) 0 72px;
+    text-align: center;
+}
+
+.eyebrow,
+.time {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    opacity: 0.8;
+}
+
+.hero h1,
+footer h2 {
+    margin: 18px 0 30px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: normal;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+}
+
+.hero h1 em,
+footer h2 em {
+    font-weight: normal;
+    text-transform: none;
+}
+
+.hero-image {
+    width: min(100%, 660px);
+    max-height: 430px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 220px 220px 18px 18px;
+}
+
+.quick-facts {
+    display: flex;
+    justify-content: center;
+    gap: clamp(22px, 6vw, 72px);
+    margin-top: 30px;
+}
+
+.quick-facts p {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.quick-facts span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+.quick-facts strong {
+    font-weight: normal;
+}
+
+.ingredients,
+.step {
+    width: min(100% - 36px, var(--content-width));
+    margin: 28px auto;
+    padding: clamp(28px, 6vw, 54px);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.ingredients {
+    background: #e8dfcf;
+    color: #292525;
+}
+
+.ingredients h2 {
+    margin: 8px 0 22px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-style: italic;
+    font-weight: normal;
+}
+
+.ingredients ul {
+    display: inline-block;
+    margin: 0;
+    padding-left: 1.2em;
+    text-align: left;
+}
+
+.ingredients li {
+    padding: 4px 0;
+}
+
+.step {
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgb(0 0 0 / 18%);
+}
+
+.step-one { background: var(--rose); }
+.step-two { background: var(--mauve); }
+.step-three { background: var(--plum); }
+.step-four { background: var(--slate); }
+.step-five { background: #343641; }
+.step-six { background: #242630; }
+.step-seven { background: #17181d; }
+.step-eight {
+    background: #0e0e10;
+    border: 1px solid rgb(243 235 221 / 65%);
+}
+
+.time {
+    margin: 0 0 8px;
+    opacity: 0.8;
+}
+
+.step-number {
+    margin: 0;
+    font-size: clamp(3.5rem, 9vw, 5.5rem);
+    line-height: 1;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.step h2 {
+    max-width: 520px;
+    margin: 14px auto 24px;
+    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+    line-height: 1.15;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.step img {
+    width: min(100%, 360px);
+    max-height: 390px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 350ms ease, filter 350ms ease;
+}
+
+.step img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.06);
+}
+
+.description {
+    max-width: 440px;
+    margin: 22px auto 0;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+}
+
+.interlude {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.interlude p {
+    margin: 0;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-style: italic;
+}
+
+.interlude h2 {
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    font-weight: normal;
+    line-height: 1;
+    font-style: italic;
+}
+
+.interlude span {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.6rem;
+}
+
+.playlist-link,
+.back-to-top {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 11px 18px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.playlist-link:hover,
+.back-to-top:hover {
+    background: var(--cream);
+    color: var(--ink);
+    transform: translateY(-2px);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--cream);
+    outline-offset: 5px;
+}
+
+footer {
+    padding: clamp(70px, 12vw, 140px) 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 28px;
+}
+
+footer .back-to-top {
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .hero {
+        width: min(100% - 28px, 980px);
+        padding-top: 54px;
+        padding-bottom: 48px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 11vw, 4.2rem);
+    }
+
+    .hero-image {
+        border-radius: 140px 140px 14px 14px;
+    }
+
+    .quick-facts {
+        gap: 18px;
+    }
+
+    .quick-facts p {
+        font-size: 0.85rem;
+    }
+
+    .ingredients,
+    .step {
+        width: calc(100% - 28px);
+        margin: 18px auto;
+        padding: 28px 22px;
+    }
+
+    .step:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .interlude {
+        padding: 48px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
